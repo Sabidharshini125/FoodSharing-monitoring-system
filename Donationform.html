@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food Donation Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./Donationform.css">
+</head>
+<body>
+    <header class="page-header">
+        <nav>
+          <a href="#0" aria-label="forecastr logo" class="logo">
+            <svg width="140" height="49">
+              <use xlink:href="#logo"></use>
+            </svg>
+          </a>
+          <button class="toggle-mob-menu" aria-expanded="false" aria-label="open menu">
+            <svg width="20" height="20" aria-hidden="true">
+              <use xlink:href="#down"></use>
+            </svg>
+          </button>
+          <ul class="admin-menu">
+            <li class="menu-heading">
+              <h3>Admin</h3>
+            </li>
+            <li>
+              <a href="#0">
+                <!-- <svg>
+                  <use xlink:href="#pages"></use>
+                </svg> -->
+                <span>Pages</span>
+              </a>
+            </li>
+            <li>
+              <a href="Donationform.html">
+                <!-- <svg>
+                  <use xlink:href="#pages"></use>
+                </svg> -->
+                <span>Receivers</span>
+              </a>
+            </li>
+            <li>
+              <a href="#0">
+                <!-- <svg>
+                  <use xlink:href="#pages"></use>
+                </svg> -->
+                <span>History</span>
+              </a>
+            </li>
+            <li>
+              <a href="#0">
+                <!-- <svg>
+                  <use xlink:href="#pages"></use>
+                </svg> -->
+                <span>NGO's</span>
+              </a>
+            </li>
+            <li>
+              <a href="DashboardReceiver.html">
+                <!-- <svg>
+                  <use xlink:href="#pages"></use>
+                </svg> -->
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <!-- more list items here -->
+            <li>
+              <div class="switch">
+                <input type="checkbox" id="mode" checked>
+                <label for="mode">
+                  <span></span>
+                  <span>Dark</span>
+                </label>
+              </div>
+              <button class="collapse-btn" aria-expanded="true" aria-label="collapse menu">
+                <svg aria-hidden="true">
+                  <use xlink:href="#collapse"></use>
+                </svg>
+                <span>Collapse</span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    <div class="form-container">
+        <h1>NGO Registration Form</h1>
+        <form id="donationForm">
+            <div class="input-group">
+                <label for="donorName">Donor Name:</label>
+                <input type="text" id="donorName" required>
+            </div>
+            <div class="input-group">
+                <label for="orphanageName">Orphanage Name:</label>
+                <input type="text" id="orphanageName" required>
+            </div>
+            <div class="input-group">
+                <label for="foodQuantity">Food Quantity (kg):</label>
+                <input type="number" id="foodQuantity" required>
+            </div>
+            <button type="submit">Donate</button>
+        </form>
+        <p id="message"></p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="./Donationform.js"></script>
+</body>
+</html>

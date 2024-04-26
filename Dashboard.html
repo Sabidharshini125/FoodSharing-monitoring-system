@@ -1,0 +1,174 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food Distribution System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Food Distribution System</h1>
+        
+        Food Donation Form
+        <div class="donate-form">
+            <h2>Donate Food</h2>
+            <label for="donorName">Name:</label>
+            <input type="text" id="donorName" placeholder="Enter your name">
+
+            <label for="foodType">Food Type:</label>
+            <input type="text" id="foodType" placeholder="Enter food type">
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" placeholder="Enter quantity">
+
+            <button onclick="donateFood()">Donate</button>
+        </div>
+
+        
+        <div class="ask-form">
+            <h2>Ask for Food</h2>
+            <label for="ngoName">NGO Name:</label>
+            <input type="text" id="ngoName" placeholder="Enter NGO name">
+
+            <label for="foodNeeded">Food Needed:</label>
+            <input type="text" id="foodNeeded" placeholder="Enter food needed">
+
+            <label for="quantityNeeded">Quantity Needed:</label>
+            <input type="number" id="quantityNeeded" placeholder="Enter quantity needed">
+
+            <button onclick="askForFood()">Ask</button>
+        </div>
+
+        
+        <div class="records">
+            <h2>Food Records</h2>
+            <h3>Food Received by NGOs</h3>
+            <ul id="receivedRecords"></ul>
+
+            <h3>Food Availability</h3>
+            <ul id="availableFood"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="page-header">
+        <nav>
+          <a href="#0" aria-label="forecastr logo" class="logo">
+            <svg width="140" height="49">
+              <use xlink:href="#logo"></use>
+            </svg>
+          </a>
+          <button class="toggle-mob-menu" aria-expanded="false" aria-label="open menu">
+            <svg width="20" height="20" aria-hidden="true">
+              <use xlink:href="#down"></use>
+            </svg>
+          </button>
+          <ul class="admin-menu">
+            <li class="menu-heading">
+              <h3>Admin</h3>
+            </li>
+            <li>
+              <a href="#0">
+                <!-- <svg>
+                  <use xlink:href="#pages"></use>
+                </svg> -->
+                <span>Pages</span>
+              </a>
+            </li>
+            <li>
+              <a href="display1.html">
+                <!-- <svg>
+                  <use xlink:href="#pages"></use>
+                </svg> -->
+                <span>Donaters</span>
+              </a>
+            </li>
+            <li>
+              <a href="#0">
+                <!-- <svg>
+                  <use xlink:href="#pages"></use>
+                </svg> -->
+                <span>History</span>
+              </a>
+            </li>
+            <li>
+              <a href="#0">
+                <!-- <svg>
+                  <use xlink:href="#pages"></use>
+                </svg> -->
+                <span>NGO's</span>
+              </a>
+            </li>
+            <li>
+              <a href="Dashboard.html">
+                <!-- <svg>
+                  <use xlink:href="#pages"></use>
+                </svg> -->
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <!-- more list items here -->
+            <li>
+              <div class="switch">
+                <input type="checkbox" id="mode" checked>
+                <label for="mode">
+                  <span></span>
+                  <span>Dark</span>
+                </label>
+              </div>
+              <button class="collapse-btn" aria-expanded="true" aria-label="collapse menu">
+                <svg aria-hidden="true">
+                  <use xlink:href="#collapse"></use>
+                </svg>
+                <span>Collapse</span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <section class="page-content">
+      <section class="search-and-user">
+        <form>
+          <input type="search" placeholder="Search Pages...">
+          <button type="submit" aria-label="submit form">
+            <svg aria-hidden="true">
+              <use xlink:href="#search"></use>
+            </svg>
+          </button>
+        </form>
+        <div class="admin-profile">
+          <span class="greeting">...</span>
+          <div class="notifications">
+            <span class="badge">...</span>
+            <svg>
+              <use xlink:href="#users"></use>
+            </svg>
+          </div>
+        </div>
+      </section>
+      <section class="grid">
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+      </section>
+      </section>
+      <script src="script.js"></script>
+</body>
+</html>

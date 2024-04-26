@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Page</title>
+     <link rel="stylesheet" href="styles.css">'
+    <style>
+        body {
+            background: linear-gradient(to bottom right, violet, rose);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1{
+            text-align: center;
+        }
+        #donorForm {
+            border: 2px solid black;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 5px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+            margin: 0px 30px;
+        }
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header class="page-header">
+        <nav>
+          <a href="#0" aria-label="forecastr logo" class="logo">
+            <svg width="140" height="49">
+              <use xlink:href="#logo"></use>
+            </svg>
+          </a>
+          <button class="toggle-mob-menu" aria-expanded="false" aria-label="open menu">
+            <svg width="20" height="20" aria-hidden="true">
+              <use xlink:href="#down"></use>
+            </svg>
+          </button>
+          <ul class="admin-menu">
+            <li class="menu-heading">
+              <h3>Admin</h3>
+            </li>
+            <li>
+              <a href="#0">
+                <!-- <svg>
+                  <use xlink:href="#pages"></use>
+                </svg> -->
+                <span>Pages</span>
+              </a>
+            </li>
+            <li>
+              <a href="display1.html">
+                <!-- <svg>
+                  <use xlink:href="#pages"></use>
+                </svg> -->
+                <span>Donaters</span>
+              </a>
+            </li>
+            <li>
+              <a href="#0">
+                <!-- <svg>
+                  <use xlink:href="#pages"></use>
+                </svg> -->
+                <span>History</span>
+              </a>
+            </li>
+            <li>
+              <a href="#0">
+                <!-- <svg>
+                  <use xlink:href="#pages"></use>
+                </svg> -->
+                <span>NGO's</span>
+              </a>
+            </li>
+            <li>
+              <a href="Dashboard.html">
+                <!-- <svg>
+                  <use xlink:href="#pages"></use>
+                </svg> -->
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <!-- more list items here -->
+            <li>
+              <div class="switch">
+                <input type="checkbox" id="mode" checked>
+                <label for="mode">
+                  <span></span>
+                  <span>Dark</span>
+                </label>
+              </div>
+              <button class="collapse-btn" aria-expanded="true" aria-label="collapse menu">
+                <svg aria-hidden="true">
+                  <use xlink:href="#collapse"></use>
+                </svg>
+                <span>Collapse</span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </header>
+<div>
+    <form id="donorForm">
+        <h2>Enter Donor Details</h2>
+        <label for="foodAvailability">Food Availability:</label>
+        <input type="text" id="foodAvailability" name="foodAvailability" required><br><br>
+        
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required><br><br>
+        
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="text" id="phoneNumber" name="phoneNumber" required><br><br>
+        
+        <button type="submit">Submit</button>
+    </form>
+</div>
+<script>
+    document.getElementById("donorForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Get donor details from form inputs
+        var foodAvailability = document.getElementById("foodAvailability").value;
+        var location = document.getElementById("location").value;
+        var phoneNumber = document.getElementById("phoneNumber").value;
+
+        // Retrieve existing donor details array from localStorage or create a new one
+        var donorDetailsArray = JSON.parse(localStorage.getItem('donorDetailsArray')) || [];
+
+        // Add new donor details to the array
+        donorDetailsArray.push({ foodAvailability: foodAvailability, location: location, phoneNumber: phoneNumber });
+
+        // Store updated donor details array in localStorage
+        localStorage.setItem('donorDetailsArray', JSON.stringify(donorDetailsArray));
+
+        // Redirect to the display page
+        window.location.href = "display.html";
+    });
+</script>
+</body>
+</html>

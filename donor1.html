@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Page</title>
+</head>
+<body>
+    <h2>Enter Donor Details</h2>
+    <style>
+        
+    </style>
+    <form id="donorForm">
+        <label for="foodAvailability">Food Availability:</label>
+        <input type="text" id="foodAvailability" name="foodAvailability" required><br><br>
+        
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required><br><br>
+        
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="text" id="phoneNumber" name="phoneNumber" required><br><br>
+        
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById("donorForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Get donor details from form inputs
+            var foodAvailability = document.getElementById("foodAvailability").value;
+            var location = document.getElementById("location").value;
+            var phoneNumber = document.getElementById("phoneNumber").value;
+
+            // Retrieve existing donor details array from localStorage or create a new one
+            var donorDetailsArray = JSON.parse(localStorage.getItem('donorDetailsArray')) || [];
+
+            // Add new donor details to the array
+            donorDetailsArray.push({ foodAvailability: foodAvailability, location: location, phoneNumber: phoneNumber });
+
+            // Store updated donor details array in localStorage
+            localStorage.setItem('donorDetailsArray', JSON.stringify(donorDetailsArray));
+
+            // Redirect to the display page
+            window.location.href = "display.html";
+        });
+    </script>
+</body>
+</html>

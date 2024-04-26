@@ -1,0 +1,103 @@
+<!-- //Donation registeration -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration</title>
+  <!--<link rel="stylesheet" href="D:\MERNintern\Style.css">-->
+  <style>
+  body {
+    background-color: #f0f0f0;
+    color: #333;
+    background-image: url(img.jpg); 
+    background-size: cover;
+    background-position:center;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    margin-top:2cm;
+  }
+  
+  label {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  button{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #5c3d86;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover{
+    background-color: #4a2f69;
+  }
+  </style>
+</head>
+<body>
+  <form action="/register" method="POST">
+    <h1>Registration</h1>
+    <label for="name">Name:</label>
+    <input type="text" name="name" required><br>
+    <label for="dob">Date of Birth:</label>
+    <input type="date" name="dob" required><br>
+    <label for="gender">Gender:</label>
+    <input type="text" name="gender" required><br>
+    <label for="mobile">Mobile Number:</label>
+    <input type="tel" name="mobile" required><br>
+    <label for="username">Username:</label>
+    <input type="text" name="username" required><br>
+    <label for="password">Password:</label>
+    <input type="password" name="password" required><br>
+    <label for="password">Current Location:</label>
+    <input type="text" name="location" required><br>
+    <button type="submit" onclick="register()" id="btn">Register</button>
+    <h4>Already registered?<a href="reg1.html">Sign in</a></h4>
+  </form>
+
+<script>
+  const nextPageBtn = document.getElementById("btn");
+  nextPageBtn.addEventListener("click", () => {
+  const iframe = document.getElementById("my-iframe");
+  const currentSrc = iframe.src;
+  const nextPagePath = "reg1.html";
+  iframe.src = nextPagePath;
+});
+  </script>
+</body>
+</html>
